@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> Teste de execução Image Preview Js</title>
+	<script src="jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="imagePreview.js"></script>
+</head>
+<body>
+
+	<input type="file" id="fupImagem"></input>
+	<img id="imgContainer"/>
+	
+	
+	<span class="img1"></span>
+
+	<input type="file" id="fupImagem2"></input>
+	<img id="imgContainer2"/>
+	
+	<span class="img2"></span>
+	<span class="img2"></span>
+
+	<script type="text/javascript">
+		var opt = {
+			'larguraPadrao' : 320,
+			'alturaPadrao' : 240,
+			'callBackFunc' : '',
+			'legendaContainer' : document.getElementsByClassName('img1')
+
+		};
+
+		$.ImagePreview($('#imgContainer'),$('#fupImagem')[0],opt);
+	</script>
+
+</body>
+</html>
